@@ -37,8 +37,6 @@ class ListViewRemoteViewsFactory implements RemoteViewsService.RemoteViewsFactor
 //        records = new ArrayList<String>();
         listData = this.addDummyData();
 
-//        records.add("asdasasdasdas");
-//        records.add("asdasa");
     }
     // Given the position (index) of a WidgetItem in the array, use the item's text value in
     // combination with the app widget item XML file to construct a RemoteViews object.
@@ -75,10 +73,6 @@ class ListViewRemoteViewsFactory implements RemoteViewsService.RemoteViewsFactor
         RemoteViews views = new RemoteViews(mContext.getPackageName(), R.layout.widget_layout);
 
         views.setOnClickPendingIntent(R.id.button_jd, pendingIntent);
-
-
-
-
 
 
         // Return the RemoteViews object.
