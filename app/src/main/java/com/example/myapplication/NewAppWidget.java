@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
 import android.widget.RemoteViews;
+import android.widget.Toast;
 
 /**
  * Implementation of App Widget functionality.
@@ -18,20 +19,23 @@ public class NewAppWidget extends AppWidgetProvider {
     public static final String UPDATE_MEETING_ACTION = "android.appwidget.action.APPWIDGET_UPDATE";
 
     public static final String EXTRA_ITEM = "com.example.edockh.EXTRA_ITEM";
+    private static final String MyOnClick = "myOnClickTag";
 
 
-    static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
-                                int appWidgetId) {
+//    static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
+//                                int appWidgetId) {
+//
+//        CharSequence widgetText = context.getString(R.string.appwidget_text);
+//        // Construct the RemoteViews object
+//        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.new_app_widget);
+//        views.setTextViewText(R.id.appwidget_text, widgetText);
+////        views.set
+//
+//
+//        // Instruct the widget manager to update the widget
+//        appWidgetManager.updateAppWidget(appWidgetId, views);
+//    }
 
-        CharSequence widgetText = context.getString(R.string.appwidget_text);
-        // Construct the RemoteViews object
-        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.new_app_widget);
-        views.setTextViewText(R.id.appwidget_text, widgetText);
-//        views.set
-
-        // Instruct the widget manager to update the widget
-        appWidgetManager.updateAppWidget(appWidgetId, views);
-    }
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
@@ -57,7 +61,7 @@ public class NewAppWidget extends AppWidgetProvider {
             rv.setRemoteAdapter(appWidgetIds[i], R.id.list_view, intent);
             // Trigger listview item click
             Intent startActivityIntent = new Intent(context,MainActivity.class);
-            PendingIntent startActivityPendingIntent = PendingIntent.getActivity(context, 0, startActivityIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+            PendingIntent startActivityPendingIntent = PendingIntent.getActivity(context, 0, startActivityIntent, 0);
             rv.setPendingIntentTemplate(R.id.list_view, startActivityPendingIntent);
             // The empty view is displayed when the collection has no items.
             // It should be in the same layout used to instantiate the RemoteViews  object above.
@@ -65,12 +69,16 @@ public class NewAppWidget extends AppWidgetProvider {
             //
             // Do additional processing specific to this app widget...
             //
+
+
+            rv.setOnClickPendingIntent(R.id.button_jd, getPendingSelfIntent(context, MyOnClick));
             appWidgetManager.updateAppWidget(appWidgetIds[i], rv);
         }
 
         super.onUpdate(context, appWidgetManager, appWidgetIds);
 
     }
+
 
     @Override
     public void onEnabled(Context context) {
@@ -87,12 +95,25 @@ public class NewAppWidget extends AppWidgetProvider {
     @Override
     public void onReceive(Context context, Intent intent) {
         AppWidgetManager mgr = AppWidgetManager.getInstance(context);
+
         if (intent.getAction().equals(UPDATE_MEETING_ACTION)) {
             int appWidgetIds[] = mgr.getAppWidgetIds(new ComponentName(context,NewAppWidget.class));
-            Log.e("received", intent.getAction());
+            Log.e("received", "1st log");
             mgr.notifyAppWidgetViewDataChanged(appWidgetIds, R.id.list_view);
+        }
+         if (MyOnClick.equals(intent.getAction())){
+            Log.e("received","hi this is internshala");
+            Toast.makeText(context, "Button1", Toast.LENGTH_SHORT).show();
         }
         super.onReceive(context, intent);
     }
+
+
+    protected PendingIntent getPendingSelfIntent(Context context, String action) {
+        Intent intent = new Intent(context, getClass());
+        intent.setAction(action);
+        return PendingIntent.getBroadcast(context, 0, intent, 0);
+    }
+
 }
 
