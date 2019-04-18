@@ -87,19 +87,11 @@ public class NewAppWidget extends AppWidgetProvider {
     @Override
     public void onReceive(Context context, Intent intent) {
         AppWidgetManager mgr = AppWidgetManager.getInstance(context);
-
         if (intent.getAction().equals(UPDATE_MEETING_ACTION)) {
-
             int appWidgetIds[] = mgr.getAppWidgetIds(new ComponentName(context,NewAppWidget.class));
-
             Log.e("received", intent.getAction());
-
             mgr.notifyAppWidgetViewDataChanged(appWidgetIds, R.id.list_view);
-
-
-
         }
-
         super.onReceive(context, intent);
     }
 }
