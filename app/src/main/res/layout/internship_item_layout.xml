@@ -2,20 +2,25 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="200dp"
     android:padding="10dp"
     >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
 
     <LinearLayout
         android:id="@+id/linearlayout1"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
 
         <LinearLayout
             android:layout_weight="1"
             android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content">
 
         <TextView
@@ -33,35 +38,32 @@
             android:text="hi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="20dp"
+                android:id="@+id/internship_stipend"
+                android:text="hi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+            android:layout_marginRight="20dp"
+            android:id="@+id/linearlayout2"
+            android:layout_width="50dp"
+            android:layout_height="50dp">
             <ImageView
                 android:id="@+id/company_image"
                 android:src="@drawable/ic_launcher_foreground"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
         </LinearLayout>
-
 
 
     </LinearLayout>
 
-    <TextView
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/linearlayout1"
-        android:id="@+id/internship_stipend"
-        android:text="hi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <Button
-        android:layout_marginTop="30dp"
-        android:text="ViewDetails"
-        android:layout_below="@+id/internship_stipend"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+
+    </android.support.v7.widget.CardView>
+
 
 </RelativeLayout>
