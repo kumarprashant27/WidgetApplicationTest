@@ -4,12 +4,24 @@
     android:background="#09C"
     android:padding="@dimen/widget_margin">
 
+
+<LinearLayout
+    android:gravity="center_vertical"
+    android:padding="10dp"
+    android:id="@+id/linearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
     <TextView
         android:id="@+id/appwidget_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_margin="8dp"
         android:background="#09C"
         android:contentDescription="@string/appwidget_text"
         android:text="@string/appwidget_text"
@@ -17,7 +29,11 @@
         android:textSize="24sp"
         android:textStyle="bold|italic" />
 
+</LinearLayout>
+
     <ListView
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/linearlayout"
         android:id="@+id/listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

@@ -17,7 +17,6 @@ class ListViewRemoteViewsFactory implements RemoteViewsService.RemoteViewsFactor
     private Context mContext;
     private ArrayList<String> records;
     private ArrayList<DataItem> listData;
-
     private DataItem dataItem;
 
     public ListViewRemoteViewsFactory(Context context, Intent intent) {
@@ -35,8 +34,9 @@ class ListViewRemoteViewsFactory implements RemoteViewsService.RemoteViewsFactor
         dataItem = new DataItem("new title", "new company");
         listData.add(dataItem);
 
-        records.add("asdasasdasdas");
-        records.add("asdasa");
+        records.add(0,"hi");
+        records.add(1,"hello");
+
     }
     // Given the position (index) of a WidgetItem in the array, use the item's text value in
     // combination with the app widget item XML file to construct a RemoteViews object.
