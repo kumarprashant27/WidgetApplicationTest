@@ -14,17 +14,16 @@ public class InternshipAdapter extends RecyclerView.Adapter<InternshipHolder> {
     private List<InternshipModel> internshipModelList;
     public InternshipAdapter() {
     internshipModelList =new ArrayList<>();
-    internshipModelList.add(new InternshipModel("C1","A1","F1","100$",R.drawable.ic_launcher_foreground));
-    internshipModelList.add(new InternshipModel("C2","A2","F2","200$",R.drawable.ic_launcher_foreground));
-    internshipModelList.add(new InternshipModel("C3","A3","F3","300$",R.drawable.ic_launcher_foreground));
-    internshipModelList.add(new InternshipModel("C4","A4","F4","400$",R.drawable.ic_launcher_foreground));
-    internshipModelList.add(new InternshipModel("C5","A5","F5","500$",R.drawable.ic_launcher_foreground));
-    internshipModelList.add(new InternshipModel("C6","A6","F6","600$",R.drawable.ic_launcher_foreground));
-    internshipModelList.add(new InternshipModel("C7","A7","F7","700$",R.drawable.ic_launcher_foreground));
-    internshipModelList.add(new InternshipModel("C8","A8","F8","800$",R.drawable.ic_launcher_foreground));
-    internshipModelList.add(new InternshipModel("C9","A9","F9","900$",R.drawable.ic_launcher_foreground));
-    internshipModelList.add(new InternshipModel("C10","A10","F10","1000$",R.drawable.ic_launcher_foreground));
-
+    internshipModelList.add(new InternshipModel("Mobile App Development","ABC ltd.","Meerut"," :1000/month",R.drawable.intern));
+    internshipModelList.add(new InternshipModel("Marketing","DEF ltd.","Ghaziabad"," :1000/month",R.drawable.intern));
+    internshipModelList.add(new InternshipModel("Sales","GHI ltd.","Gurugram"," :1000/month",R.drawable.intern));
+    internshipModelList.add(new InternshipModel("Mobile App Development","JKL ltd.","Delhi"," :1000/month",R.drawable.intern));
+    internshipModelList.add(new InternshipModel("Web Development","MNO ltd.","Faridabad"," :1000/month",R.drawable.intern));
+    internshipModelList.add(new InternshipModel("Volunteer","PQR ltd.","Pune"," :1000/month",R.drawable.intern));
+    internshipModelList.add(new InternshipModel("Marketing","STU ltd.","Banglore"," :1000/month",R.drawable.intern));
+    internshipModelList.add(new InternshipModel("Writer","VWX ltd.","Mysore"," :1000/month",R.drawable.intern));
+    internshipModelList.add(new InternshipModel("Mobile App Development","YZA ltd.","Chennai"," :1000/month",R.drawable.intern));
+    internshipModelList.add(new InternshipModel("Sales","AGM ltd.","Sri lanka"," :1000/month",R.drawable.intern));
 
     }
 

@@ -94,7 +94,7 @@
         android:layout_marginBottom="10dp"
         android:text="APPLY"
         android:textColor="@color/colorWhite"
-        android:background="@drawable/btn_bg_fill_disabled"
+        android:background="@drawable/btn_bg_fill"
         />
 
 

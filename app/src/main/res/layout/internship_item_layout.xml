@@ -1,70 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
-    android:background="#EBE4E4"
+    android:layout_height="250dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="10dp">
+    android:padding="5dp">
 
     <android.support.v7.widget.CardView
-        app:cardCornerRadius="20dp"
-        app:cardElevation="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="200dp">
 
-    <LinearLayout
-        android:padding="20dp"
-        android:id="@+id/linearlayout1"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:baselineAligned="false">
+        android:layout_height="300dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp">
 
         <LinearLayout
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/internship_type"
-            android:text="hi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/internship_company"
-            android:text="hi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/internship_city"
-            android:text="hi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-            <TextView
-                android:layout_marginTop="20dp"
-                android:id="@+id/internship_stipend"
-                android:text="hi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_marginRight="20dp"
-            android:id="@+id/linearlayout2"
-            android:layout_width="50dp"
-            android:layout_height="50dp">
-            <ImageView
-                android:id="@+id/company_image"
-                android:src="@drawable/ic_launcher_foreground"
+            <LinearLayout
+                android:id="@+id/linearlayout1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/internship_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="hi"
+                        android:textColor="#2196F3"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/internship_company"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="hi"
+                        android:textColor="#7A7777"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/internship_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="hi"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom"
+                    android:id="@+id/linearlayout2"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="20dp">
+
+                    <ImageView
+                        android:id="@+id/company_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/intern" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Start date "
+                        android:textColor="#949090"
+                        android:textSize="15dp" />
+                    <TextView
+                        android:textStyle="bold"
+                        android:id="@+id/internship_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":Immediately"
+                        android:textColor="#000000"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Duration "
+                        android:textColor="#949090"
+                        android:textSize="15dp" />
+                    <TextView
+                        android:textStyle="bold"
+                        android:id="@+id/internship_duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="   :6 Months"
+                        android:textColor="#000000"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Stipend    "
+                        android:textColor="#949090"
+                        android:textSize="15dp" />
+                    <TextView
+                        android:textStyle="bold"
+                        android:id="@+id/internship_stipend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="    :20000/month"
+                        android:textColor="#000000"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Apply by  "
+                        android:textColor="#949090"
+                        android:textSize="15dp" />
+                    <TextView
+                        android:textStyle="bold"
+                        android:id="@+id/internship_apply_By"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="   :30 Apr'19"
+                        android:textColor="#000000"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="5"
+                    android:text="Full time"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#ffff"
+                    android:text="VIEW DETAILS >"
+                    android:textColor="#2196F3" />
+            </LinearLayout>
+
+
         </LinearLayout>
-
-
-    </LinearLayout>
-
 
     </android.support.v7.widget.CardView>
 

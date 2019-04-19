@@ -78,10 +78,10 @@ class ListViewRemoteViewsFactory implements RemoteViewsService.RemoteViewsFactor
         rv.setTextViewText(R.id.i_location, data.getLocation());
         Log.e("iddd", data.getId()+"");
         Log.e("position", position+"");
-//        if(data.getApplied() && false){
-            rv.setTextViewText(R.id.button_apply, "Applied");
+//        if(data.getApplied()){
+            rv.setTextViewText(R.id.button_apply, "Apply");
 //            rv.setInt(R.id.button_apply, "setBackgroundColor",
-//                    R.drawable.btn_bg_fill_disabled);
+//                    R.drawable.btn_bg_fill);
 //        } else{
 //            rv.setTextViewText(R.id.button_apply, "Apply");
 //            rv.setInt(R.id.button_apply, "setBackgroundColor",
