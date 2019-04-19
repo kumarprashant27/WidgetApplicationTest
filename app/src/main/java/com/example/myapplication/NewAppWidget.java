@@ -59,9 +59,25 @@ public class NewAppWidget extends AppWidgetProvider {
             Intent startActivityIntent = new Intent(context,MainActivity.class);
             PendingIntent startActivityPendingIntent = PendingIntent.getActivity(context, 0, startActivityIntent, PendingIntent.FLAG_UPDATE_CURRENT);
             rv.setPendingIntentTemplate(R.id.list_view, startActivityPendingIntent);
+
+
+//            Intent intent1 = new Intent(context, SettingsActivity.class);
+//            // Add the app widget ID to the intent extras.
+//            intent1.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetIds[i]);
+//            intent1.setData(Uri.parse(intent1.toUri(Intent.URI_INTENT_SCHEME)));
+//
+//            Intent startActivityIntent1 = new Intent(context,SettingsActivity.class);
+//            PendingIntent startActivityPendingIntent1 = PendingIntent.getActivity(context, 0, startActivityIntent1, PendingIntent.FLAG_UPDATE_CURRENT);
+//            rv.setPendingIntentTemplate(R.id.browse_more, startActivityPendingIntent1);
+
+
+            Intent configIntent = new Intent(context, MainActivity.class);
+            PendingIntent configPendingIntent = PendingIntent.getActivity(context, 0, configIntent, 0);
+            rv.setOnClickPendingIntent(R.id.browse_more, configPendingIntent);
+
             // The empty view is displayed when the collection has no items.
             // It should be in the same layout used to instantiate the RemoteViews  object above.
-            rv.setEmptyView(R.id.list_view, R.id.empty_view);
+//            rv.setEmptyView(R.id.list_view, R.id.empty_view);
             //
             // Do additional processing specific to this app widget...
             //

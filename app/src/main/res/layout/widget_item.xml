@@ -2,7 +2,7 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="140dp"
     android:layout_margin="10dp"
     android:padding="10dp"
     android:divider="@drawable/list_divider" android:dividerHeight="1px">
@@ -11,6 +11,8 @@
         android:id="@+id/i_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/colorBlue"
+        android:textSize="18dp"
         android:text="Title of internship"/>
 
     <TextView
@@ -18,37 +20,82 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/i_title"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="5dp"
         android:text="Company Name" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+    <LinearLayout
         android:layout_height="wrap_content"
         android:layout_below="@+id/i_company"
-        android:layout_marginTop="16dp"
-        android:text="TextView" />
+        android:layout_width="match_parent"
+        android:id="@+id/location_container"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Location : " />
+
+        <TextView
+            android:id="@+id/i_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Delhi" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:id="@+id/stipend_container"
+        android:layout_below="@+id/location_container">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Stipend : " />
+        <TextView
+            android:id="@+id/i_stipend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="10000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stipend_container"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Duration : " />
+
+        <TextView
+            android:id="@+id/i_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="3 Months" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/button_apply"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:height="9dp"
-        android:text="Apply" />
-
-    <Button
-        android:id="@+id/button_jd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="10dp"
-        android:text="Show JD" />
+        android:text="APPLY"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/btn_bg_fill_disabled"
+        />
 
 
 </RelativeLayout>

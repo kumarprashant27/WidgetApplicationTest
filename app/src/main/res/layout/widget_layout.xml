@@ -1,35 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#f8f8f8"
     >
+
     <TextView
         android:id="@+id/heading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         style="@android:style/TextAppearance.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="4dp"
-        android:text="Internships of the day"
-        />
+        android:background="@color/colorBlue"
+        android:padding="13dp"
+        android:text="INTERNSHIPS OF THE DAY"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite" />
 
     <ListView
         android:id="@+id/list_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heading"
+        android:layout_marginBottom="40dp"
         android:gravity="center"
         android:loopViews="true" />
 
-    <TextView
-        android:id="@+id/empty_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        style="@android:style/TextAppearance.Medium"
-        android:layout_gravity="center"
-        android:layout_margin="4dp"
-        android:text="No meeting"
-        />
 
-</LinearLayout>
+    <Button
+        android:id="@+id/browse_more"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="2dp"
+        android:paddingLeft="5dp"
+        android:paddingStart="5dp"
+        android:textColor="@color/colorBlue"
+        android:text="Browse More"
+        android:background="@drawable/btn_bg"
+        />
+</RelativeLayout>
